@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cheatsheet</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body data-theme="light">
+    <div class="container">
+        <header>
+            <h1>Cheatsheet</h1>
+            <div class="controls">
+                <div class="dropdown-group">
+                    <label for="sectionSelect">Szekció:</label>
+                    <select aria-label="Select Section" id="sectionSelect">
+                        <option value="">Minden szekció</option>
+                        <option value="csharp">C# Console App</option>
+                        <option value="wpf">WPF</option>
+                        <option value="html">HTML</option>
+                        <option value="frontend-angular">Frontend - Angular</option>
+                        <option value="frontend-react">Frontend - React</option>
+                        <option value="backend-laravel">Backend - Laravel</option>
+                        <option value="backend-aspnet">Backend - ASP.NET</option>
+                        <option value="backend-node">Backend - Node.js</option>
+                    </select>
+                </div>
+                <input type="search" id="searchInput" placeholder="Keresés..." aria-label="Keresés">
+                <button class="theme-toggle" id="themeToggle">🌙</button>
+            </div>
+        </header>
+
+        <!-- C# Console App -->
+        <div id="csharp" class="section">
+            <h2>C# Console App</h2>
+            
+            <div class="box" data-keywords="console write readline">
+                <div class="box-header">
+                    <span class="box-title">Console Input/Output</span>
+                    <button class="copy-btn" onclick="copyBox(this)">Másolás</button>
+                </div>
+                <div class="box-content">// Ide írd a jegyzetet</div>
+            </div>
+
+            <div class="box" data-keywords="string int array list">
+                <div class="box-header">
+                    <span class="box-title">Adattípusok és kollekciók</span>
+                    <button class="copy-btn" onclick="copyBox(this)">Másolás</button>
+                </div>
+                <div class="box-content">// Ide írd a jegyzetet</div>
+            </div>
+
+            <div class="box" data-keywords="class method namespace">
+                <div class="box-header">
+                    <span class="box-title">OOP Alapok</span>
+                    <button class="copy-btn" onclick="copyBox(this)">Másolás</button>
+                </div>
+                <div class="box-content">// Ide írd a jegyzetet</div>
+            </div>
+
+            <div class="box" data-keywords="file stream read write">
+                <div class="box-header">
+                    <span class="box-title">File I/O</span>
+                    <button class="copy-btn" onclick="copyBox(this)">Másolás</button>
+                </div>
+                <div class="box-content">// Ide írd a jegyzetet</div>
+            </div>
+        </div>
+
+        <!-- WPF -->
+        <div id="wpf" class="section">
+            <h2>WPF</h2>
+            
+            <div class="box" data-keywords="xaml binding">
+                <div class="box-header">
+                    <span class="box-title">XAML Alapok</span>
+                    <button class="copy-btn" onclick="copyBox(this)">Másolás</button>
+                </div>
+                <div class="box-content">// Ide írd a jegyzetet</div>
+            </div>
+
+            <div class="box" data-keywords="mvvm viewmodel command">
+                <div class="box-header">
+                    <span class="box-title">MVVM Pattern</span>
+                    <button class="copy-btn" onclick="copyBox(this)">Másolás</button>
+                </div>
+                <div class="box-content">// Ide írd a jegyzetet</div>
+            </div>
+
+            <div class="box" data-keywords="control event">
+                <div class="box-header">
+                    <span class="box-title">Controk és események</span>
+                    <button class="copy-btn" onclick="copyBox(this)">Másolás</button>
+                </div>
+                <div class="box-content">// Ide írd a jegyzetet</div>
+            </div>
+        </div>
+
+        <!-- HTML -->
+        <div id="html" class="section">
+            <h2>HTML</h2>
+            
+            <div class="box" data-keywords="tag element semantic">
+                <div class="box-header">
+                    <span class="box-title">HTML Tag-ek</span>
+                    <button class="copy-btn" onclick="copyBox(this)">Másolás</button>
+                </div>
+                <div class="box-content">// Ide írd a jegyzetet</div>
+            </div>
+
+            <div class="box" data-keywords="form input validation">
+                <div class="box-header">
+                    <span class="box-title">Űrlapok</span>
+                    <button class="copy-btn" onclick="copyBox(this)">Másolás</button>
+                </div>
+                <div class="box-content">// Ide írd a jegyzetet</div>
+            </div>
+
+            <div class="box" data-keywords="table list link image">
+                <div class="box-header">
+                    <span class="box-title">Média és táblázatok</span>
+                    <button class="copy-btn" onclick="copyBox(this)">Másolás</button>
+                </div>
+                <div class="box-content">// Ide írd a jegyzetet</div>
+            </div>
+        </div>
+
+        <!-- Frontend - Angular -->
+        <div id="frontend-angular" class="section">
+            <h2>Frontend - Angular</h2>
+            
+            <div class="box" data-keywords="component service module">
+                <div class="box-header">
+                    <span class="box-title">Komponensek</span>
+                    <button class="copy-btn" onclick="copyBox(this)">Másolás</button>
+                </div>
+                <div class="box-content">// Ide írd a jegyzetet</div>
+            </div>
+
+            <div class="box" data-keywords="router outlet">
+                <div class="box-header">
+                    <span class="box-title">Routing</span>
+                    <button class="copy-btn" onclick="copyBox(this)">Másolás</button>
+                </div>
+                <div class="box-content">// Ide írd a jegyzetet</div>
+            </div>
+
+            <div class="box" data-keywords="http api">
+                <div class="box-header">
+                    <span class="box-title">HTTP</span>
+                    <button class="copy-btn" onclick="copyBox(this)">Másolás</button>
+                </div>
+                <div class="box-content">// Ide írd a jegyzetet</div>
+            </div>
+        </div>
+
+        <!-- Frontend - React -->
+        <div id="frontend-react" class="section">
+            <h2>Frontend - React</h2>
+            
+            <div class="box" data-keywords="component hook state">
+                <div class="box-header">
+                    <span class="box-title">Komponensek</span>
+                    <button class="copy-btn" onclick="copyBox(this)">Másolás</button>
+                </div>
+                <div class="box-content">// Ide írd a jegyzetet</div>
+            </div>
+
+            <div class="box" data-keywords="router route">
+                <div class="box-header">
+                    <span class="box-title">Routing</span>
+                    <button class="copy-btn" onclick="copyBox(this)">Másolás</button>
+                </div>
+                <div class="box-content">// Ide írd a jegyzetet</div>
+            </div>
+
+            <div class="box" data-keywords="redux context">
+                <div class="box-header">
+                    <span class="box-title">State Management</span>
+                    <button class="copy-btn" onclick="copyBox(this)">Másolás</button>
+                </div>
+                <div class="box-content">// Ide írd a jegyzetet</div>
+            </div>
+        </div>
+
+        <!-- Backend - Laravel -->
+        <div id="backend-laravel" class="section">
+            <h2>Backend - Laravel</h2>
+            
+            <div class="box" data-keywords="route controller">
+                <div class="box-header">
+                    <span class="box-title">Routing és controller</span>
+                    <button class="copy-btn" onclick="copyBox(this)">Másolás</button>
+                </div>
+                <div class="box-content">// Ide írd a jegyzetet</div>
+            </div>
+
+            <div class="box" data-keywords="model migration seeder">
+                <div class="box-header">
+                    <span class="box-title">Eloquent</span>
+                    <button class="copy-btn" onclick="copyBox(this)">Másolás</button>
+                </div>
+                <div class="box-content">// Ide írd a jegyzetet</div>
+            </div>
+
+            <div class="box" data-keywords="blade template">
+                <div class="box-header">
+                    <span class="box-title">Blade</span>
+                    <button class="copy-btn" onclick="copyBox(this)">Másolás</button>
+                </div>
+                <div class="box-content">// Ide írd a jegyzetet</div>
+            </div>
+        </div>
+
+        <!-- Backend - ASP.NET -->
+        <div id="backend-aspnet" class="section">
+            <h2>Backend - ASP.NET</h2>
+            
+            <div class="box" data-keywords="controller action">
+                <div class="box-header">
+                    <span class="box-title">Controller</span>
+                    <button class="copy-btn" onclick="copyBox(this)">Másolás</button>
+                </div>
+                <div class="box-content">// Ide írd a jegyzetet</div>
+            </div>
+
+            <div class="box" data-keywords="entity framework core">
+                <div class="box-header">
+                    <span class="box-title">Entity Framework</span>
+                    <button class="copy-btn" onclick="copyBox(this)">Másolás</button>
+                </div>
+                <div class="box-content">// Ide írd a jegyzetet</div>
+            </div>
+
+            <div class="box" data-keywords="view razor">
+                <div class="box-header">
+                    <span class="box-title">Razor</span>
+                    <button class="copy-btn" onclick="copyBox(this)">Másolás</button>
+                </div>
+                <div class="box-content">// Ide írd a jegyzetet</div>
+            </div>
+        </div>
+
+        <!-- Backend - Node.js -->
+        <div id="backend-node" class="section">
+            <h2>Backend - Node.js</h2>
+            
+            <div class="box" data-keywords="express route">
+                <div class="box-header">
+                    <span class="box-title">Express</span>
+                    <button class="copy-btn" onclick="copyBox(this)">Másolás</button>
+                </div>
+                <div class="box-content">// Ide írd a jegyzetet</div>
+            </div>
+
+            <div class="box" data-keywords="mongodb mongoose">
+                <div class="box-header">
+                    <span class="box-title">MongoDB</span>
+                    <button class="copy-btn" onclick="copyBox(this)">Másolás</button>
+                </div>
+                <div class="box-content">// Ide írd a jegyzetet</div>
+            </div>
+
+            <div class="box" data-keywords="jwt auth">
+                <div class="box-header">
+                    <span class="box-title">Auth</span>
+                    <button class="copy-btn" onclick="copyBox(this)">Másolás</button>
+                </div>
+                <div class="box-content">// Ide írd a jegyzetet</div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
