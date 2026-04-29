@@ -41,10 +41,14 @@ searchInput.addEventListener("input", function () {
   });
 });
 
-// Copy function
-function copyBox(btn) {
-  const box = btn.closest(".box");
-  const content = box.querySelector(".box-content").textContent;
+function copySnippet(btn) {
+  const snippetHeader = btn.closest(".snippet-header");
+  const codeElement = snippetHeader?.nextElementSibling?.querySelector("code");
+  if (!codeElement) {
+    return;
+  }
+
+  const content = codeElement.textContent;
   navigator.clipboard.writeText(content).then(() => {
     const original = btn.textContent;
     btn.textContent = "Másolva!";

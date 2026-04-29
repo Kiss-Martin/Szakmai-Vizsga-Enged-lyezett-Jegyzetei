@@ -1,275 +1,515 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="hu">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cheatsheet</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body data-theme="light">
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body data-theme="light">
     <div class="container">
-        <header>
-            <h1>Cheatsheet</h1>
-            <div class="controls">
-                <div class="dropdown-group">
-                    <label for="sectionSelect">Szekció:</label>
-                    <select aria-label="Select Section" id="sectionSelect">
-                        <option value="">Minden szekció</option>
-                        <option value="csharp">C# Console App</option>
-                        <option value="wpf">WPF</option>
-                        <option value="html">HTML</option>
-                        <option value="frontend-angular">Frontend - Angular</option>
-                        <option value="frontend-react">Frontend - React</option>
-                        <option value="backend-laravel">Backend - Laravel</option>
-                        <option value="backend-aspnet">Backend - ASP.NET</option>
-                        <option value="backend-node">Backend - Node.js</option>
-                    </select>
-                </div>
-                <input type="search" id="searchInput" placeholder="Keresés..." aria-label="Keresés">
-                <button class="theme-toggle" id="themeToggle">🌙</button>
-            </div>
-        </header>
+      <header>
+        <h1>Cheatsheet</h1>
+        <div class="controls">
+          <div class="dropdown-group">
+            <label for="sectionSelect">Szekció:</label>
+            <select aria-label="Select Section" id="sectionSelect">
+              <option value="">Minden szekció</option>
+              <option value="csharp">C# Console App</option>
+              <option value="wpf">WPF</option>
+              <option value="html">HTML</option>
+              <option value="frontend-angular">Frontend - Angular</option>
+              <option value="frontend-react">Frontend - React</option>
+              <option value="backend-laravel">Backend - Laravel</option>
+              <option value="backend-aspnet">Backend - ASP.NET</option>
+              <option value="backend-next">Backend - Next.js</option>
+            </select>
+          </div>
+          <input
+            type="search"
+            id="searchInput"
+            placeholder="Keresés..."
+            aria-label="Keresés"
+          />
+          <button class="theme-toggle" id="themeToggle">🌙</button>
+        </div>
+      </header>
 
-        <!-- C# Console App -->
-        <div id="csharp" class="section">
-            <h2>C# Console App</h2>
-            
-            <div class="box" data-keywords="console write readline">
-                <div class="box-header">
-                    <span class="box-title">Console Input/Output</span>
-                    <button class="copy-btn" onclick="copyBox(this)">Másolás</button>
-                </div>
-                <div class="box-content">// Ide írd a jegyzetet</div>
-            </div>
+      <!-- C# Console App -->
+      <div id="csharp" class="section">
+        <h2>C# Console App</h2>
 
-            <div class="box" data-keywords="string int array list">
-                <div class="box-header">
-                    <span class="box-title">Adattípusok és kollekciók</span>
-                    <button class="copy-btn" onclick="copyBox(this)">Másolás</button>
-                </div>
-                <div class="box-content">// Ide írd a jegyzetet</div>
-            </div>
-
-            <div class="box" data-keywords="class method namespace">
-                <div class="box-header">
-                    <span class="box-title">OOP Alapok</span>
-                    <button class="copy-btn" onclick="copyBox(this)">Másolás</button>
-                </div>
-                <div class="box-content">// Ide írd a jegyzetet</div>
-            </div>
-
-            <div class="box" data-keywords="file stream read write">
-                <div class="box-header">
-                    <span class="box-title">File I/O</span>
-                    <button class="copy-btn" onclick="copyBox(this)">Másolás</button>
-                </div>
-                <div class="box-content">// Ide írd a jegyzetet</div>
-            </div>
+        <div class="box" data-keywords="console write readline">
+          <div class="box-header">
+            <span class="box-title">Console Input/Output</span>
+          </div>
+          <div class="box-content">// Ide írd a jegyzetet</div>
         </div>
 
-        <!-- WPF -->
-        <div id="wpf" class="section">
-            <h2>WPF</h2>
-            
-            <div class="box" data-keywords="xaml binding">
-                <div class="box-header">
-                    <span class="box-title">XAML Alapok</span>
-                    <button class="copy-btn" onclick="copyBox(this)">Másolás</button>
-                </div>
-                <div class="box-content">// Ide írd a jegyzetet</div>
-            </div>
-
-            <div class="box" data-keywords="mvvm viewmodel command">
-                <div class="box-header">
-                    <span class="box-title">MVVM Pattern</span>
-                    <button class="copy-btn" onclick="copyBox(this)">Másolás</button>
-                </div>
-                <div class="box-content">// Ide írd a jegyzetet</div>
-            </div>
-
-            <div class="box" data-keywords="control event">
-                <div class="box-header">
-                    <span class="box-title">Controk és események</span>
-                    <button class="copy-btn" onclick="copyBox(this)">Másolás</button>
-                </div>
-                <div class="box-content">// Ide írd a jegyzetet</div>
-            </div>
+        <div class="box" data-keywords="string int array list">
+          <div class="box-header">
+            <span class="box-title">Adattípusok és kollekciók</span>
+          </div>
+          <div class="box-content">// Ide írd a jegyzetet</div>
         </div>
 
-        <!-- HTML -->
-        <div id="html" class="section">
-            <h2>HTML</h2>
-            
-            <div class="box" data-keywords="tag element semantic">
-                <div class="box-header">
-                    <span class="box-title">HTML Tag-ek</span>
-                    <button class="copy-btn" onclick="copyBox(this)">Másolás</button>
-                </div>
-                <div class="box-content">// Ide írd a jegyzetet</div>
-            </div>
-
-            <div class="box" data-keywords="form input validation">
-                <div class="box-header">
-                    <span class="box-title">Űrlapok</span>
-                    <button class="copy-btn" onclick="copyBox(this)">Másolás</button>
-                </div>
-                <div class="box-content">// Ide írd a jegyzetet</div>
-            </div>
-
-            <div class="box" data-keywords="table list link image">
-                <div class="box-header">
-                    <span class="box-title">Média és táblázatok</span>
-                    <button class="copy-btn" onclick="copyBox(this)">Másolás</button>
-                </div>
-                <div class="box-content">// Ide írd a jegyzetet</div>
-            </div>
+        <div class="box" data-keywords="class method namespace">
+          <div class="box-header">
+            <span class="box-title">OOP Alapok</span>
+          </div>
+          <div class="box-content">// Ide írd a jegyzetet</div>
         </div>
 
-        <!-- Frontend - Angular -->
-        <div id="frontend-angular" class="section">
-            <h2>Frontend - Angular</h2>
-            
-            <div class="box" data-keywords="component service module">
-                <div class="box-header">
-                    <span class="box-title">Komponensek</span>
-                    <button class="copy-btn" onclick="copyBox(this)">Másolás</button>
-                </div>
-                <div class="box-content">// Ide írd a jegyzetet</div>
-            </div>
+        <div class="box" data-keywords="file stream read write">
+          <div class="box-header">
+            <span class="box-title">File I/O</span>
+          </div>
+          <div class="box-content">// Ide írd a jegyzetet</div>
+        </div>
+      </div>
 
-            <div class="box" data-keywords="router outlet">
-                <div class="box-header">
-                    <span class="box-title">Routing</span>
-                    <button class="copy-btn" onclick="copyBox(this)">Másolás</button>
-                </div>
-                <div class="box-content">// Ide írd a jegyzetet</div>
-            </div>
+      <!-- WPF -->
+      <div id="wpf" class="section">
+        <h2>WPF</h2>
 
-            <div class="box" data-keywords="http api">
-                <div class="box-header">
-                    <span class="box-title">HTTP</span>
-                    <button class="copy-btn" onclick="copyBox(this)">Másolás</button>
-                </div>
-                <div class="box-content">// Ide írd a jegyzetet</div>
-            </div>
+        <div class="box" data-keywords="xaml binding">
+          <div class="box-header">
+            <span class="box-title">XAML Alapok</span>
+          </div>
+          <div class="box-content">// Ide írd a jegyzetet</div>
         </div>
 
-        <!-- Frontend - React -->
-        <div id="frontend-react" class="section">
-            <h2>Frontend - React</h2>
-            
-            <div class="box" data-keywords="component hook state">
-                <div class="box-header">
-                    <span class="box-title">Komponensek</span>
-                    <button class="copy-btn" onclick="copyBox(this)">Másolás</button>
-                </div>
-                <div class="box-content">// Ide írd a jegyzetet</div>
-            </div>
-
-            <div class="box" data-keywords="router route">
-                <div class="box-header">
-                    <span class="box-title">Routing</span>
-                    <button class="copy-btn" onclick="copyBox(this)">Másolás</button>
-                </div>
-                <div class="box-content">// Ide írd a jegyzetet</div>
-            </div>
-
-            <div class="box" data-keywords="redux context">
-                <div class="box-header">
-                    <span class="box-title">State Management</span>
-                    <button class="copy-btn" onclick="copyBox(this)">Másolás</button>
-                </div>
-                <div class="box-content">// Ide írd a jegyzetet</div>
-            </div>
+        <div class="box" data-keywords="mvvm viewmodel command">
+          <div class="box-header">
+            <span class="box-title">MVVM Pattern</span>
+          </div>
+          <div class="box-content">// Ide írd a jegyzetet</div>
         </div>
 
-        <!-- Backend - Laravel -->
-        <div id="backend-laravel" class="section">
-            <h2>Backend - Laravel</h2>
-            
-            <div class="box" data-keywords="route controller">
-                <div class="box-header">
-                    <span class="box-title">Routing és controller</span>
-                    <button class="copy-btn" onclick="copyBox(this)">Másolás</button>
-                </div>
-                <div class="box-content">// Ide írd a jegyzetet</div>
-            </div>
+        <div class="box" data-keywords="control event">
+          <div class="box-header">
+            <span class="box-title">Controk és események</span>
+          </div>
+          <div class="box-content">// Ide írd a jegyzetet</div>
+        </div>
+      </div>
 
-            <div class="box" data-keywords="model migration seeder">
-                <div class="box-header">
-                    <span class="box-title">Eloquent</span>
-                    <button class="copy-btn" onclick="copyBox(this)">Másolás</button>
-                </div>
-                <div class="box-content">// Ide írd a jegyzetet</div>
-            </div>
+      <!-- HTML -->
+      <div id="html" class="section">
+        <h2>HTML</h2>
 
-            <div class="box" data-keywords="blade template">
-                <div class="box-header">
-                    <span class="box-title">Blade</span>
-                    <button class="copy-btn" onclick="copyBox(this)">Másolás</button>
-                </div>
-                <div class="box-content">// Ide írd a jegyzetet</div>
-            </div>
+        <div class="box" data-keywords="tag element semantic">
+          <div class="box-header">
+            <span class="box-title">HTML Tag-ek</span>
+          </div>
+          <div class="box-content">// Ide írd a jegyzetet</div>
         </div>
 
-        <!-- Backend - ASP.NET -->
-        <div id="backend-aspnet" class="section">
-            <h2>Backend - ASP.NET</h2>
-            
-            <div class="box" data-keywords="controller action">
-                <div class="box-header">
-                    <span class="box-title">Controller</span>
-                    <button class="copy-btn" onclick="copyBox(this)">Másolás</button>
-                </div>
-                <div class="box-content">// Ide írd a jegyzetet</div>
-            </div>
-
-            <div class="box" data-keywords="entity framework core">
-                <div class="box-header">
-                    <span class="box-title">Entity Framework</span>
-                    <button class="copy-btn" onclick="copyBox(this)">Másolás</button>
-                </div>
-                <div class="box-content">// Ide írd a jegyzetet</div>
-            </div>
-
-            <div class="box" data-keywords="view razor">
-                <div class="box-header">
-                    <span class="box-title">Razor</span>
-                    <button class="copy-btn" onclick="copyBox(this)">Másolás</button>
-                </div>
-                <div class="box-content">// Ide írd a jegyzetet</div>
-            </div>
+        <div class="box" data-keywords="form input validation">
+          <div class="box-header">
+            <span class="box-title">Űrlapok</span>
+          </div>
+          <div class="box-content">// Ide írd a jegyzetet</div>
         </div>
 
-        <!-- Backend - Node.js -->
-        <div id="backend-node" class="section">
-            <h2>Backend - Node.js</h2>
-            
-            <div class="box" data-keywords="express route">
-                <div class="box-header">
-                    <span class="box-title">Express</span>
-                    <button class="copy-btn" onclick="copyBox(this)">Másolás</button>
-                </div>
-                <div class="box-content">// Ide írd a jegyzetet</div>
-            </div>
-
-            <div class="box" data-keywords="mongodb mongoose">
-                <div class="box-header">
-                    <span class="box-title">MongoDB</span>
-                    <button class="copy-btn" onclick="copyBox(this)">Másolás</button>
-                </div>
-                <div class="box-content">// Ide írd a jegyzetet</div>
-            </div>
-
-            <div class="box" data-keywords="jwt auth">
-                <div class="box-header">
-                    <span class="box-title">Auth</span>
-                    <button class="copy-btn" onclick="copyBox(this)">Másolás</button>
-                </div>
-                <div class="box-content">// Ide írd a jegyzetet</div>
-            </div>
+        <div class="box" data-keywords="table list link image">
+          <div class="box-header">
+            <span class="box-title">Média és táblázatok</span>
+          </div>
+          <div class="box-content">// Ide írd a jegyzetet</div>
         </div>
+      </div>
+
+      <!-- Frontend - Angular -->
+      <div id="frontend-angular" class="section">
+        <h2>Frontend - Angular</h2>
+
+        <div class="box" data-keywords="component service module">
+          <div class="box-header">
+            <span class="box-title">Komponensek</span>
+          </div>
+          <div class="box-content">// Ide írd a jegyzetet</div>
+        </div>
+
+        <div class="box" data-keywords="router outlet">
+          <div class="box-header">
+            <span class="box-title">Routing</span>
+          </div>
+          <div class="box-content">// Ide írd a jegyzetet</div>
+        </div>
+
+        <div class="box" data-keywords="http api">
+          <div class="box-header">
+            <span class="box-title">HTTP</span>
+          </div>
+          <div class="box-content">// Ide írd a jegyzetet</div>
+        </div>
+      </div>
+
+      <!-- Frontend - React -->
+      <div id="frontend-react" class="section">
+        <h2>Frontend - React</h2>
+
+        <div class="box" data-keywords="component hook state">
+          <div class="box-header">
+            <span class="box-title">Komponensek</span>
+          </div>
+          <div class="box-content">// Ide írd a jegyzetet</div>
+        </div>
+
+        <div class="box" data-keywords="router route">
+          <div class="box-header">
+            <span class="box-title">Routing</span>
+          </div>
+          <div class="box-content">// Ide írd a jegyzetet</div>
+        </div>
+
+        <div class="box" data-keywords="redux context">
+          <div class="box-header">
+            <span class="box-title">State Management</span>
+          </div>
+          <div class="box-content">// Ide írd a jegyzetet</div>
+        </div>
+      </div>
+
+      <!-- Backend - Laravel -->
+      <div id="backend-laravel" class="section">
+        <h2>Backend - Laravel</h2>
+
+        <div class="box" data-keywords="route controller">
+          <div class="box-header">
+            <span class="box-title">Routing és controller</span>
+          </div>
+          <div class="box-content">// Ide írd a jegyzetet</div>
+        </div>
+
+        <div class="box" data-keywords="model migration seeder">
+          <div class="box-header">
+            <span class="box-title">Eloquent</span>
+          </div>
+          <div class="box-content">// Ide írd a jegyzetet</div>
+        </div>
+
+        <div class="box" data-keywords="blade template">
+          <div class="box-header">
+            <span class="box-title">Blade</span>
+          </div>
+          <div class="box-content">// Ide írd a jegyzetet</div>
+        </div>
+      </div>
+
+      <!-- Backend - ASP.NET -->
+      <div id="backend-aspnet" class="section">
+        <h2>Backend - ASP.NET</h2>
+
+        <div class="box" data-keywords="controller action">
+          <div class="box-header">
+            <span class="box-title">Controller</span>
+          </div>
+          <div class="box-content">// Ide írd a jegyzetet</div>
+        </div>
+
+        <div class="box" data-keywords="entity framework core">
+          <div class="box-header">
+            <span class="box-title">Entity Framework</span>
+          </div>
+          <div class="box-content">// Ide írd a jegyzetet</div>
+        </div>
+
+        <div class="box" data-keywords="view razor">
+          <div class="box-header">
+            <span class="box-title">Razor</span>
+          </div>
+          <div class="box-content">// Ide írd a jegyzetet</div>
+        </div>
+      </div>
+
+      <!-- Backend - Node.js -->
+      <div id="backend-next" class="section">
+        <h2>Backend - Next.js</h2>
+
+        <div class="box" data-keywords="next.js route">
+          <div class="box-header">
+            <span class="box-title">Next.js</span>
+          </div>
+          <div class="box-content">
+            <div class="snippet-header">
+              <h3 class="snippet-title">standard GET</h3>
+              <button class="copy-snippet-btn" onclick="copySnippet(this)">
+                Másolás
+              </button>
+            </div>
+            <pre><code>export async function GET() {
+  try {
+    const data = await prisma.table.findMany({});
+    return NextResponse.json(data);
+  } catch (error) {
+    return NextResponse.json(
+      { message: error instanceof Error ? error.message : "Ismeretlen hiba!" },
+      { status: 500 }
+    );
+  }
+}</code></pre>
+
+            <div class="snippet-header">
+              <h3 class="snippet-title">standard GET by Id</h3>
+              <button class="copy-snippet-btn" onclick="copySnippet(this)">
+                Másolás
+              </button>
+            </div>
+            <pre><code>export async function GET(
+  request: NextRequest,
+  { params }: { params: Promise&lt;{ id: string }&gt; }
+) {
+  try {
+    const { id } = await params;
+    const data = await prisma.table.findUnique({
+      where: { id: Number(id) },
+    });
+    return NextResponse.json(data);
+  } catch (error) {
+    return NextResponse.json(
+      { message: error instanceof Error ? error.message : "Ismeretlen hiba!" },
+      { status: 500 }
+    );
+  }
+}</code></pre>
+
+            <div class="snippet-header">
+              <h3 class="snippet-title">standard POST</h3>
+              <button class="copy-snippet-btn" onclick="copySnippet(this)">
+                Másolás
+              </button>
+            </div>
+            <pre><code>export async function POST(request: Request) {
+  try {
+    const body = await request.json();
+    const newOne = await prisma.table.create({
+      data: body,
+    });
+    return NextResponse.json(newOne, { status: 201 });
+  } catch (error) {
+    return NextResponse.json(
+      { message: error instanceof Error ? error.message : "Ismeretlen hiba!" },
+      { status: 500 }
+    );
+  }
+}</code></pre>
+
+            <div class="snippet-header">
+              <h3 class="snippet-title">standard PATCH</h3>
+              <button class="copy-snippet-btn" onclick="copySnippet(this)">
+                Másolás
+              </button>
+            </div>
+            <pre><code>export async function PATCH(
+  request: NextRequest,
+  { params }: { params: Promise&lt;{ id: string }&gt; }
+) {
+  try {
+    const { id } = await params;
+    const changedData = await request.json();
+    const updatedDoc = await prisma.table.update({
+      where: { id: Number(id) },
+      data: changedData,
+    });
+    return NextResponse.json(updatedDoc, { status: 200 });
+  } catch (error) {
+    return NextResponse.json(
+      { message: error instanceof Error ? error.message : "Ismeretlen hiba!" },
+      { status: 500 }
+    );
+  }
+}</code></pre>
+
+            <div class="snippet-header">
+              <h3 class="snippet-title">standard PUT</h3>
+              <button class="copy-snippet-btn" onclick="copySnippet(this)">
+                Másolás
+              </button>
+            </div>
+            <pre><code>export async function PUT(
+  request: NextRequest,
+  { params }: { params: Promise&lt;{ id: string }&gt; }
+) {
+  try {
+    const { id } = await params;
+    const newDocument = await request.json();
+    const updatedDoc = await prisma.table.update({
+      where: { id: Number(id) },
+      data: newDocument,
+    });
+    return NextResponse.json(updatedDoc, { status: 200 });
+  } catch (error) {
+    return NextResponse.json(
+      { message: error instanceof Error ? error.message : "Ismeretlen hiba!" },
+      { status: 500 }
+    );
+  }
+}</code></pre>
+
+            <div class="snippet-header">
+              <h3 class="snippet-title">standard DELETE</h3>
+              <button class="copy-snippet-btn" onclick="copySnippet(this)">
+                Másolás
+              </button>
+            </div>
+            <pre><code>export async function DELETE(
+  request: NextRequest,
+  { params }: { params: Promise&lt;{ id: string }&gt; }
+) {
+  try {
+    const { id } = await params;
+    await prisma.table.delete({ where: { id: Number(id) } });
+    return new NextResponse(null, { status: 204 });
+  } catch (error) {
+    return NextResponse.json(
+      { message: error instanceof Error ? error.message : "Ismeretlen hiba!" },
+      { status: 500 }
+    );
+  }
+}</code></pre>
+          </div>
+        </div>
+
+        <div class="box" data-keywords="mongodb mongoose">
+          <div class="box-header">
+            <span class="box-title">MongoDB - Prisma</span>
+          </div>
+          <div class="box-content">
+            <div class="snippet-header">
+              <h3 class="snippet-title">start Mongo szerver</h3>
+              <button class="copy-snippet-btn" onclick="copySnippet(this)">
+                Másolás
+              </button>
+            </div>
+            <pre><code>if not exist "c:\data\" mkdir "c:\data"
+if not exist "c:\data\db" mkdir "c:\data\db"
+"c:\Program Files\MongoDB\Server\8.2\bin\mongod.exe" --dbpath="c:\data\db" --replSet "rs0"</code></pre>
+
+            <div class="snippet-header">
+              <h3 class="snippet-title">json file jsonArray formátumban</h3>
+              <button class="copy-snippet-btn" onclick="copySnippet(this)">
+                Másolás
+              </button>
+            </div>
+            <pre><code>[
+  {
+    "_id": 1,
+    "unique_something": "alpha",
+    "default_something": "default value"
+  },
+  {
+    "_id": 2,
+    "unique_something": "beta",
+    "default_something": "custom value"
+  }
+]</code></pre>
+
+            <div class="snippet-header">
+              <h3 class="snippet-title">másik collection example</h3>
+              <button class="copy-snippet-btn" onclick="copySnippet(this)">
+                Másolás
+              </button>
+            </div>
+            <pre><code>[
+  {
+    "_id": 1,
+    "date": {
+      "$date": "2026-04-29T00:00:00.000Z"
+      // ISO formátumú dátum, a MongoDB ezt így értelmezi majd, és a Prisma is jól fogja kezelni a @db.Date használatával
+    },
+    "relation_id": 1
+  },
+  {
+    "_id": 2,
+    "date": null,
+    "relation_id": 2
+  }
+]</code></pre>
+            <div class="snippet-header">
+              <h3 class="snippet-title">Mongo db feltöltése a json fájlokkal</h3>
+              <button class="copy-snippet-btn" onclick="copySnippet(this)">
+                Másolás
+              </button>
+            </div>
+            <pre><code>@echo off
+chcp 65001
+"mongoimport.exe" --uri="mongodb://localhost:27017" --db=dbname --collection=collectionname --drop --file=filename.json --jsonArray
+"mongoimport.exe" --uri="mongodb://localhost:27017" --db=dbname --collection=collectionname --drop --file=filename.json --jsonArray
+echo PLEASE KILL AND RESTART YOUR BACKEND SERVER DEV TASK IF RUNNING!</code></pre>
+
+            <div class="snippet-header">
+              <h3 class="snippet-title">.env fájl tartalma</h3>
+              <button class="copy-snippet-btn" onclick="copySnippet(this)">
+                Másolás
+              </button>
+            </div>
+            <pre><code>DATABASE_URL="mongodb://localhost:27017/dbname"</code></pre>
+            <div class="snippet-header">
+              <h3 class="snippet-title">prisma schema létrehozása</h3>
+              <button class="copy-snippet-btn" onclick="copySnippet(this)">
+                Másolás
+              </button>
+            </div>
+            <pre><code>npx prisma db pull --force</code></pre>
+
+            <div class="snippet-header">
+              <h3 class="snippet-title">prisma schema example</h3>
+              <button class="copy-snippet-btn" onclick="copySnippet(this)">
+                Másolás
+              </button>
+            </div>
+            <pre><code>datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
+}
+
+model Collection1 {
+  id                Int    @id @map("_id")
+  unique_something  String @unique
+  default_something String @default("default value")
+
+  viewpoints Collection2[]
+
+  @@index([default_something])
+  @@map("collection1name")
+}
+
+model Collection2 {
+  id          Int       @id @map("_id")
+  date        DateTime? @default(now()) @db.Date
+  relation_id Int
+
+  location Collection1? @relation(fields: [relation_id], references: [id])
+
+  @@map("collection2name")
+}
+</code></pre>
+
+            <div class="snippet-header">
+              <h3 class="snippet-title">prisma schema pusholása</h3>
+              <button class="copy-snippet-btn" onclick="copySnippet(this)">
+                Másolás
+              </button>
+            </div>
+            <pre><code>npx prisma db push</code></pre>
+          </div>
+        </div>
+
+        <div class="box" data-keywords="jwt auth">
+          <div class="box-header">
+            <span class="box-title">Egyéb</span>
+          </div>
+          <div class="box-content">
+            <div class="snippet-header">
+              <h3 class="snippet-title">Next.js backend struktúra</h3>
+            </div>
+            <img src="pics/next_backend_structure.png" alt="Nem jelent meg a kép, ezer bocsánat!" />
+          </div>
+        </div>
+      </div>
     </div>
     <script src="script.js"></script>
-</body>
+  </body>
 </html>

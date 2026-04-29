@@ -120,25 +120,71 @@
         font-size: 1rem;
     }
 
-    .copy-btn {
-        padding: 6px 12px;
-        font-size: 0.85rem;
-        background: var(--btn-bg);
-        color: #fff;
-        border: none;
-        border-radius: 3px;
-        cursor: pointer;
-    }
-
-    .copy-btn:hover {
-        background: var(--btn-hover);
-    }
-
     .box-content {
         padding: 15px;
         white-space: pre-wrap;
         font-family: monospace;
         font-size: 0.9rem;
+    }
+
+    .snippet-title {
+        font-size: 1rem;
+        margin: 8px 0;
+    }
+
+    .snippet-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .copy-snippet-btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 96px;
+        height: 32px;
+        padding: 0 12px;
+        font-size: 0.8rem;
+        font-weight: 600;
+        background: var(--btn-bg);
+        color: #fff;
+        border: 1px solid transparent;
+        border-radius: 6px;
+        cursor: pointer;
+        flex-shrink: 0;
+        white-space: nowrap;
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.16);
+        transition: background 0.2s ease, box-shadow 0.2s ease, transform 0.15s ease;
+    }
+
+    .copy-snippet-btn:hover {
+        background: var(--btn-hover);
+        box-shadow: 0 3px 8px rgba(0, 0, 0, 0.18);
+    }
+
+    .copy-snippet-btn:active {
+        transform: translateY(1px);
+    }
+
+    .copy-snippet-btn:focus-visible {
+        outline: 2px solid var(--btn-hover);
+        outline-offset: 2px;
+    }
+
+    .box-content pre {
+        margin: 8px 0 16px;
+        padding: 12px;
+        border: 1px solid var(--border-light);
+        border-radius: 4px;
+        background: var(--bg-header);
+        overflow-x: auto;
+    }
+
+    .box-content code {
+        font-family: Consolas, 'Courier New', monospace;
+        line-height: 1.5;
     }
 
     .hidden {
