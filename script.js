@@ -39,6 +39,16 @@ searchInput.addEventListener("input", function () {
       content.includes(query);
     box.classList.toggle("hidden", query && !matches);
   });
+
+  // Hide sections with no visible boxes
+  sections.forEach((section) => {
+    const visibleBoxes = section.querySelectorAll('.box:not(.hidden)');
+    if (query && visibleBoxes.length === 0) {
+      section.classList.remove('active');
+    } else if (!query || visibleBoxes.length > 0) {
+      section.classList.add('active');
+    }
+  });
 });
 
 function copySnippet(btn) {
